@@ -156,9 +156,9 @@ Enfin, cette troisième variation intègre la fonction logarithme au sein de la 
 $$MSLE = \frac{1}{N}\sum\limits_{n=1}^N (\log({y_n} + 1) -\log(\widehat{y_n} + 1))^2$$ 
 
 Grace aux propriétés de la fonction logarithmique, l’intérieur des parenthèses pourrait se réécrire de la sorte : 
-
+{% raw %}
 $$\log({y_n} + 1) -\log(\widehat{y_n} + 1) = \log\left(\frac{{y_n} + 1}{\widehat{y_n} + 1}\right)$$ 
-
+{% endraw %}
 On peut donc voir qu’en réalité, la fonction de perte s’attarde plutôt sur la différence relative entre la valeur réelle et prédite. Sous cette représentation, on peut aussi voir qu’elle aura tendance à moins pénaliser les sous-estimations (ratio < 1) que les surestimations (ratio > 1), la rendant asymétrique. 
 
 ###  _4\. La fonction Huber (Huber loss)_
