@@ -136,7 +136,7 @@ First, we prepare the prompt that will be used to generate the SQL query:
     {schemas}
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
     """
     
     SQL_QUERY_PROMPT = PromptTemplate.from_template(SQL_QUERY_PROMPT_TEXT)
@@ -315,7 +315,7 @@ The following prompts and queries are generated in the order:
     */
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
 
   * The generated SQL query: 
 
@@ -442,7 +442,7 @@ After making these changes (preparation of the « flat » database), we re-execu
     */
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
     
     
 
@@ -562,7 +562,7 @@ Then, we update the « SQL query » prompt and the class of SQL chains in order 
     {schemas}
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
     """
 
   * The class: 
@@ -661,7 +661,7 @@ And here is the « SQL Query » prompt generated after these modifications :
     */
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
 
 And the generated SQL Query: 
     
@@ -739,7 +739,7 @@ Taking into account this approach, we should update the « SQL query » prompt:
     {facts}
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for {question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for {question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
     
     
 
@@ -923,7 +923,7 @@ And we get the following results:
     Rephrased Question: What was the total actual sales (revenue) for the company SFR in the year 2022?
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "What were the revenue of SFR in 2022 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
 
   * The generated SQL Query: 
 
@@ -1053,7 +1053,7 @@ First, we should update the different prompts so that they take the « history �
     {history}
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
 
   * The Updated « Response » prompt: 
 
@@ -1189,7 +1189,7 @@ For the « SQL Query » prompt, it becomes:
     AI: The actual revenue of the company SFR in the year 2022 was 1,091,257. This value was obtained by summing up all the sales for SFR in 2022, as indicated in our records.
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "in 2021 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```' :
+    -- A SQL query for "in 2021 ?". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}' :
 
 And the generated SQL Query for the second question is: 
     
@@ -1241,7 +1241,7 @@ To achieve that, we update the « SQL Query » prompt like this:
     ...
     -- A SQL query to return 1:
     SELECT 1;
-    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '```'.
+    -- A SQL query for "{question}". Please only make a stand-alone query. DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database. DO NOT RETURN Markdown Format SQL CODE. DO NOT ADD '{% raw %}```{% endraw %}'.
     Always include a WHERE condition to exclude NULL values. IMPORTANT: Whenever you use a SQL 'SUM' operation, always accompany it with a 'COUNT' operation for the NOT NULL values being summed:
 
 ###  **The run**
